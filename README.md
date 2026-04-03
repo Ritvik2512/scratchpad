@@ -1,9 +1,11 @@
 # My Coding Journey
 
-Welcome to the mess.  
-This repo is where I dump all the code I’ve written (and will keep writing) as I learn programming.  
-Mostly C/C++, some random experiments, and probably a lot of stuff that doesn’t make sense yet.
+Welcome.
 
-It’s not organized like a textbook, and it’s definitely not perfect — just a place to track my progress and maybe cringe at later.
+This repository is a collection of code I’ve written while learning and experimenting with programming.
 
-Feel free to look around. Or don’t. I’m still figuring things out.
+It started off mostly with C/C++, but my focus is gradually shifting toward Python, especially in the context of AI/ML. You’ll find a mix of fundamentals, small experiments, and projects as I build my understanding over time.
+
+This isn’t meant to be perfectly structured — it’s a working archive of progress, iteration, and exploration.
+
+The goal is simple: keep building and keep improving.
