@@ -1,4 +1,4 @@
-# My Coding Journey
+# Scratchpad
 
 Welcome.
 
