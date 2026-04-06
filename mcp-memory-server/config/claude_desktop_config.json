@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "memory": {
+      "command": "python",
+      "args": [
+        "/path/to/script/memory.py",
+        "--agent-id", "claude-desktop-main",
+        "--host", "localhost",
+        "--port", "6333"
+      ]
+    }
+  }
+}
