@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  # Qdrant vector database
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: qdrant-host
+    network_mode: host
+    volumes:
+      - qdrant_data:/qdrant/storage
+    environment:
+      - QDRANT__SERVICE__HTTP_PORT=6333
+      - QDRANT__SERVICE__GRPC_PORT=6334
+      - QDRANT__SERVICE__HOST=0.0.0.0
+    restart: always
+
+  # MCP Memory Server
+  memory-server:
+    build: .
+    container_name: memory-server-host
+    network_mode: host
+    depends_on:
+      - qdrant
+    environment:
+      - QDRANT_HOST=localhost
+      - QDRANT_PORT=6333
+      - SERVER_HOST=0.0.0.0 
+      - SERVER_PORT=8000
+      - LOG_LEVEL=info
+    volumes:
+      - ./logs:/app/logs
+    restart: always
+
+volumes:
+  qdrant_data:
+    driver: local
