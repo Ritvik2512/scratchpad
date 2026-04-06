@@ -1,0 +1,43 @@
+# MCP Memory Server - Master Requirements File
+# Use this file for all installations (local development and Docker)
+
+# Core Web Framework
+fastapi>=0.110.0
+uvicorn[standard]==0.24.0
+pydantic>=2.7.2
+
+# MCP Protocol Support
+mcp==1.9.2
+
+# Vector Database
+qdrant-client==1.14.2
+
+# Machine Learning & Embeddings
+sentence-transformers==3.0.0
+transformers>=4.40.0 
+torch>=2.0.0,<3.0.0
+numpy>=1.26.0  
+scikit-learn>=1.3.0,<2.0.0
+
+# HTTP & Async Utilities
+python-multipart>=0.0.9
+aiofiles>=23.0.0,<24.0.0
+requests>=2.31.0
+aiohttp>=3.8.0
+
+# Development & Debugging (Optional)
+# Uncomment for development and testing
+# pytest>=7.0.0
+# pytest-asyncio>=0.21.0
+# black>=23.0.0
+# flake8>=6.0.0
+
+# Installation Instructions:
+# For local development:
+#   pip install -r requirements.txt
+# 
+# For Docker:
+#   Automatically installed during docker build
+# 
+# For production (CPU-only, lighter install):
+#   pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
